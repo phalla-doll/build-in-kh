@@ -25,7 +25,7 @@ export function ProductCard({ product }: ProductCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black px-4 py-3 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
-            <span className="font-bold text-neon-lime text-xs tracking-widest uppercase">View Project</span>
+            <span className="font-bold text-neon-lime text-xs tracking-widest uppercase">View Product</span>
             <ArrowUpRight className="h-4 w-4 text-neon-lime" />
         </div>
       </div>
@@ -42,7 +42,7 @@ export function ProductCard({ product }: ProductCardProps) {
         
         {creator && (
           <p className="text-sm text-zinc-500 font-medium">
-            by <span className="text-black group-hover:bg-neon-lime transition-colors px-1 -ml-1">{creator.name}</span>
+            by <span className="text-black font-bold group-hover:underline transition-colors">{creator.name}</span>
           </p>
         )}
       </div>
