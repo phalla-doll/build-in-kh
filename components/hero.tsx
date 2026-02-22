@@ -19,10 +19,10 @@ export function Hero() {
             </p>
             
             <div className="flex flex-wrap gap-4">
-               <Link href="#products" className="inline-flex items-center gap-2 bg-neon-lime px-8 py-4 text-base font-bold text-black transition-transform hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+               <Link href="#products" className="inline-flex items-center gap-2 bg-neon-lime px-8 py-4 text-base font-bold text-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-y-0.5 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   EXPLORE PRODUCTS <ArrowRight className="h-5 w-5" />
                </Link>
-               <Link href="/about" className="inline-flex items-center gap-2 border-2 border-black bg-white px-8 py-4 text-base font-bold text-black transition-transform hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+               <Link href="/about" className="inline-flex items-center gap-2 border-2 border-black bg-white px-8 py-4 text-base font-bold text-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-y-0.5 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   LEARN MORE
                </Link>
             </div>
