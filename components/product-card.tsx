@@ -11,7 +11,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const creator = getCreator(product.creatorId);
   
   return (
-    <div className="group relative flex flex-col border-2 border-black bg-white transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:z-10 hover:shadow-[8px_8px_0px_0px_#D4F800,0_0_20px_rgba(212,248,0,0.6)]">
+    <div className="group relative flex flex-col border-2 border-black bg-white transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:z-10 hover:shadow-[8px_8px_0px_0px_#D4F800]">
       <Link href={`/product/${product.id}`} className="absolute inset-0 z-10">
         <span className="sr-only">View {product.title}</span>
       </Link>
