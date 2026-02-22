@@ -42,7 +42,7 @@ export function ProductCard({ product }: ProductCardProps) {
         
         {creator && (
           <p className="text-sm text-zinc-500 font-medium">
-            by <span className="text-black font-bold group-hover:underline transition-colors">{creator.name}</span>
+            by <span className="text-black font-bold">{creator.name}</span>
           </p>
         )}
       </div>
