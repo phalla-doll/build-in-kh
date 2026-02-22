@@ -18,11 +18,11 @@ export function Hero() {
               A curated platform that showcases real, launched digital products built by developers in Cambodia.
             </p>
             
-            <div className="flex flex-wrap gap-4">
-               <Link href="#products" className="inline-flex items-center gap-2 bg-neon-lime px-8 py-4 text-base font-bold text-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-y-0.5 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+               <Link href="#products" className="flex w-full sm:w-auto justify-center items-center gap-2 bg-neon-lime px-8 py-4 text-base font-bold text-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-y-0.5 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   EXPLORE PRODUCTS <ArrowRight className="h-5 w-5" />
                </Link>
-               <Link href="/about" className="inline-flex items-center gap-2 border-2 border-black bg-white px-8 py-4 text-base font-bold text-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-y-0.5 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+               <Link href="/about" className="flex w-full sm:w-auto justify-center items-center gap-2 border-2 border-black bg-white px-8 py-4 text-base font-bold text-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-y-0.5 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   LEARN MORE
                </Link>
             </div>
