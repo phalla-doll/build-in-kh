@@ -2,26 +2,47 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-200 bg-white py-12">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <div className="flex items-center gap-2">
-            <span className="font-display text-lg font-bold tracking-tight text-zinc-900">BuildInKH</span>
+    <footer className="bg-dark-surface py-20 text-white">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+          <div className="max-w-sm">
+             <div className="flex items-end gap-2 mb-6">
+                <span className="font-display text-8xl font-bold leading-none tracking-tighter text-white">02</span>
+                <span className="text-2xl font-mono text-zinc-600 mb-2">/06</span>
+             </div>
+             <div className="border-l-2 border-neon-lime pl-6">
+                <h3 className="text-neon-lime font-bold text-lg mb-2 flex items-center gap-2">
+                   <span className="inline-block h-4 w-4 bg-neon-lime clip-path-polygon"></span>
+                   Smart Engineering
+                </h3>
+                <p className="text-zinc-400 leading-relaxed">
+                   Built with precision and powered by innovation, BuildInKH combines advanced discovery technology with intelligent community management.
+                </p>
+             </div>
           </div>
-          <p className="text-sm text-zinc-500">
-            &copy; {new Date().getFullYear()} BuildInKH. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <Link href="#" className="text-sm text-zinc-500 hover:text-black transition-colors">
-              Privacy
-            </Link>
-            <Link href="#" className="text-sm text-zinc-500 hover:text-black transition-colors">
-              Terms
-            </Link>
-            <Link href="#" className="text-sm text-zinc-500 hover:text-black transition-colors">
-              Twitter
-            </Link>
+          
+          <div className="flex flex-col gap-6">
+             <h4 className="font-bold uppercase tracking-widest text-zinc-500 text-sm">Platform</h4>
+             <div className="flex flex-col gap-4">
+                <Link href="/" className="text-lg font-medium hover:text-neon-lime transition-colors">Discover</Link>
+                <Link href="/about" className="text-lg font-medium hover:text-neon-lime transition-colors">About</Link>
+                <Link href="/submit" className="text-lg font-medium hover:text-neon-lime transition-colors">Submit</Link>
+             </div>
           </div>
+          
+          <div className="flex flex-col gap-6">
+             <h4 className="font-bold uppercase tracking-widest text-zinc-500 text-sm">Connect</h4>
+             <div className="flex flex-col gap-4">
+                <Link href="#" className="text-lg font-medium hover:text-neon-lime transition-colors">Twitter</Link>
+                <Link href="#" className="text-lg font-medium hover:text-neon-lime transition-colors">GitHub</Link>
+                <Link href="#" className="text-lg font-medium hover:text-neon-lime transition-colors">Discord</Link>
+             </div>
+          </div>
+        </div>
+        
+        <div className="mt-20 border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+           <p className="text-zinc-600 text-sm">&copy; {new Date().getFullYear()} BuildInKH. All rights reserved.</p>
+           <p className="text-zinc-600 text-sm font-mono">DESIGNED IN CAMBODIA</p>
         </div>
       </div>
     </footer>

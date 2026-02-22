@@ -22,22 +22,17 @@ export function SearchBar() {
   }, [query, router, searchParams]);
 
   return (
-    <div className="relative w-full max-w-2xl">
-      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-6">
-        <Search className="h-5 w-5 text-zinc-400" />
+    <div className="relative w-full max-w-lg mx-auto group">
+      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-0">
+        <Search className="h-5 w-5 text-zinc-400 group-focus-within:text-zinc-900 transition-colors" />
       </div>
       <input
         type="text"
-        className="block w-full rounded-full border-0 bg-white py-4 pl-14 pr-16 text-base text-zinc-900 shadow-lg shadow-zinc-200/50 placeholder:text-zinc-400 focus:ring-2 focus:ring-pink-500/20"
-        placeholder="What are you looking for?"
+        className="block w-full border-b-2 border-zinc-200 bg-transparent py-4 pl-10 pr-4 text-lg font-bold text-black placeholder:text-zinc-400 focus:border-neon-lime focus:outline-none focus:ring-0 transition-colors"
+        placeholder="SEARCH PRODUCTS..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <div className="absolute inset-y-0 right-2 flex items-center">
-        <button className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-500 text-white transition-transform hover:scale-105 hover:bg-pink-600">
-          <Search className="h-4 w-4" />
-        </button>
-      </div>
     </div>
   );
 }

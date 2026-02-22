@@ -1,48 +1,51 @@
 import Link from 'next/link';
 import { SearchBar } from '@/components/search-bar';
+import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#f8f7f4] pt-20 pb-20 md:pt-32 md:pb-32">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="mb-6 font-display text-5xl font-bold tracking-tight text-zinc-900 md:text-6xl lg:text-7xl">
-              Discover Cambodia&apos;s <br className="hidden lg:block" />
-              Top Digital Products
+    <section className="relative overflow-hidden bg-white pt-24 pb-24 md:pt-32 md:pb-32">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="flex-1 text-left">
+            <div className="mb-6 inline-block border-l-2 border-neon-lime pl-4">
+               <span className="text-sm font-bold uppercase tracking-widest text-zinc-500">New Generation</span>
+            </div>
+            <h1 className="mb-8 font-display text-7xl font-black tracking-tighter text-black md:text-8xl lg:text-9xl leading-[0.9]">
+              Future <span className="text-zinc-300">of</span><br />
+              Digital KH
             </h1>
-            <p className="mb-8 text-lg text-zinc-500 md:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Explore work from the most talented developers and founders in the Kingdom.
-              Real, launched products ready to be used.
+            <p className="mb-10 text-xl text-zinc-600 md:text-2xl leading-relaxed max-w-xl">
+              Advanced digital products combining cutting-edge technology, local craftsmanship, and smart engineering.
             </p>
             
-            <div className="mx-auto lg:mx-0 max-w-2xl">
-              <SearchBar />
-              
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-                <span className="text-sm font-medium text-zinc-500">Popular:</span>
-                <Link href="/?stack=Mobile+App" className="rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:border-zinc-300 hover:text-black">
-                  Mobile Apps
-                </Link>
-                <Link href="/?stack=SaaS" className="rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:border-zinc-300 hover:text-black">
-                  SaaS
-                </Link>
-                <Link href="/?stack=Open+Source" className="rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:border-zinc-300 hover:text-black">
-                  Open Source
-                </Link>
-              </div>
+            <div className="flex flex-wrap gap-4">
+               <Link href="#products" className="inline-flex items-center gap-2 bg-neon-lime px-8 py-4 text-base font-bold text-black transition-transform hover:-translate-y-1 hover:shadow-lg">
+                  EXPLORE PRODUCTS <ArrowRight className="h-5 w-5" />
+               </Link>
+               <Link href="/about" className="inline-flex items-center gap-2 border-2 border-black px-8 py-4 text-base font-bold text-black transition-colors hover:bg-black hover:text-white">
+                  LEARN MORE
+               </Link>
             </div>
           </div>
           
-          <div className="relative flex-1">
-            <div className="relative mx-auto aspect-square w-full max-w-[500px] overflow-hidden rounded-[2rem] bg-zinc-900 shadow-2xl">
-               <div className="absolute inset-0 bg-gradient-to-br from-pink-500 to-violet-600 opacity-80 mix-blend-multiply"></div>
-               <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-9xl font-bold text-white opacity-20">KH</span>
-               </div>
-               {/* 3D Element Placeholder */}
-               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-50"></div>
-            </div>
+          <div className="flex-1 w-full relative">
+             <div className="relative aspect-square w-full max-w-[600px] mx-auto">
+                <div className="absolute inset-0 bg-zinc-100 rounded-full opacity-50 blur-3xl transform translate-x-10 translate-y-10"></div>
+                {/* Abstract representation of "Future" */}
+                <div className="relative h-full w-full bg-black rounded-[3rem] overflow-hidden flex items-center justify-center">
+                   <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop')] bg-cover bg-center opacity-60 mix-blend-screen"></div>
+                   <div className="relative z-10 text-center">
+                      <div className="text-neon-lime font-mono text-9xl font-bold opacity-20">01</div>
+                   </div>
+                   
+                   {/* Floating Badge */}
+                   <div className="absolute top-10 right-10 bg-white px-6 py-3 rounded-xl shadow-xl flex items-center gap-3">
+                      <div className="h-3 w-3 bg-neon-lime rounded-full animate-pulse"></div>
+                      <span className="font-bold text-sm">100+ Products</span>
+                   </div>
+                </div>
+             </div>
           </div>
         </div>
       </div>

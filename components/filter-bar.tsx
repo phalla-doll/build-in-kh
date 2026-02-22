@@ -2,7 +2,6 @@
 
 import { cn } from '@/lib/utils';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { ChevronDown, SlidersHorizontal } from 'lucide-react';
 
 const stacks: string[] = [
   'All',
@@ -31,31 +30,23 @@ export function FilterBar() {
   };
 
   return (
-    <div className="mb-8 flex flex-col items-center justify-between gap-4 md:flex-row">
-      <button className="flex items-center gap-2 rounded-lg border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 hover:border-zinc-300 hover:bg-zinc-50">
-        Following <ChevronDown className="h-4 w-4 text-zinc-400" />
-      </button>
-
-      <div className="flex flex-1 items-center justify-center gap-6 overflow-x-auto pb-2 scrollbar-hide md:pb-0">
+    <div className="mb-16 flex flex-col items-center justify-center gap-8">
+      <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
         {stacks.map((stack) => (
           <button
             key={stack}
             onClick={() => handleSelect(stack)}
             className={cn(
-              "whitespace-nowrap text-sm font-medium transition-colors",
+              "text-sm font-bold uppercase tracking-wider transition-all duration-300 px-4 py-2",
               selectedStack === stack
-                ? "text-black"
-                : "text-zinc-500 hover:text-black"
+                ? "bg-black text-white shadow-[4px_4px_0px_0px_#D4F800]"
+                : "text-zinc-500 hover:text-black hover:bg-zinc-100"
             )}
           >
             {stack}
           </button>
         ))}
       </div>
-
-      <button className="flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 hover:border-zinc-300 hover:bg-zinc-50">
-        <SlidersHorizontal className="h-4 w-4" /> Filters
-      </button>
     </div>
   );
 }

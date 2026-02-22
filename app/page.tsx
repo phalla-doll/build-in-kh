@@ -29,31 +29,31 @@ export default async function Home(props: {
   }
 
   return (
-    <main className="min-h-screen bg-white text-zinc-900 selection:bg-pink-500 selection:text-white">
+    <main className="min-h-screen bg-white text-black selection:bg-neon-lime selection:text-black">
       <Navbar />
       <Hero />
       
-      <section id="products" className="container mx-auto px-4 py-8 md:px-6">
+      <section id="products" className="container mx-auto px-6 md:px-12 py-12">
         <FilterBar />
         
         {filteredProducts.length > 0 ? (
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         ) : (
-          <div className="flex h-64 flex-col items-center justify-center rounded-2xl border border-dashed border-zinc-200 bg-zinc-50 text-center">
-            <p className="text-zinc-500">No products found matching your criteria.</p>
-            <Link href="/" className="mt-4 text-sm font-medium text-pink-500 underline underline-offset-4 hover:text-pink-600">
-              Clear filters
+          <div className="flex h-96 flex-col items-center justify-center text-center">
+            <p className="text-xl font-bold text-zinc-400">No products found.</p>
+            <Link href="/" className="mt-4 text-sm font-bold text-black border-b-2 border-neon-lime hover:bg-neon-lime transition-colors">
+              CLEAR FILTERS
             </Link>
           </div>
         )}
         
-        <div className="mt-12 flex justify-center">
-            <button className="rounded-full border border-zinc-200 bg-white px-6 py-3 text-sm font-medium text-zinc-900 shadow-sm hover:bg-zinc-50 hover:text-pink-500 transition-colors">
-                Load more shots
+        <div className="mt-24 flex justify-center">
+            <button className="text-sm font-bold text-zinc-500 hover:text-black transition-colors uppercase tracking-widest border-b-2 border-transparent hover:border-neon-lime pb-1">
+                Load More
             </button>
         </div>
       </section>

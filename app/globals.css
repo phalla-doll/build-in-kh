@@ -4,4 +4,6 @@
 @theme {
   --font-sans: 'Satoshi', sans-serif;
   --font-display: 'Satoshi', sans-serif;
+  --color-neon-lime: #D4F800;
+  --color-dark-surface: #111111;
 }

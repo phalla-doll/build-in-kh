@@ -3,38 +3,32 @@ import { Github } from 'lucide-react';
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 border-b border-zinc-100 bg-white/80 backdrop-blur-md">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-8">
-          <Link href="/" className="font-display text-xl font-bold tracking-tight text-black">
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm transition-all border-b border-zinc-100">
+      <div className="container mx-auto flex h-24 items-center justify-between px-6 md:px-12">
+        <div className="flex items-center gap-12">
+          <Link href="/" className="font-display text-3xl font-black tracking-tighter text-black">
             BuildInKH
           </Link>
-          <div className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium text-zinc-600 hover:text-black transition-colors">
-              Inspiration
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-sm font-bold text-zinc-500 hover:text-black transition-colors uppercase tracking-wide">
+              Discover
             </Link>
-            <Link href="/about" className="text-sm font-medium text-zinc-600 hover:text-black transition-colors">
+            <Link href="/about" className="text-sm font-bold text-zinc-500 hover:text-black transition-colors uppercase tracking-wide">
               About
-            </Link>
-            <Link href="#" className="text-sm font-medium text-zinc-600 hover:text-black transition-colors">
-              Jobs
             </Link>
           </div>
         </div>
         
-        <div className="flex items-center gap-4">
-          <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-black transition-colors">
+        <div className="flex items-center gap-6">
+          <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-black transition-colors">
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
           </Link>
-          <Link href="/submit" className="text-sm font-medium text-zinc-600 hover:text-black transition-colors hidden sm:block">
-            Sign in
-          </Link>
           <Link
             href="/submit"
-            className="rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+            className="rounded-none bg-neon-lime px-6 py-3 text-sm font-bold text-black transition-transform hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           >
-            Submit Product
+            SUBMIT PRODUCT
           </Link>
         </div>
       </div>
