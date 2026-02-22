@@ -21,13 +21,12 @@ export function ProductCard({ product }: ProductCardProps) {
           src={product.imageUrl}
           alt={product.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute top-0 right-0 p-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <div className="bg-neon-lime p-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                <ArrowUpRight className="h-5 w-5 text-black" />
-            </div>
+        <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black px-4 py-3 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+            <span className="font-bold text-neon-lime text-xs tracking-widest uppercase">View Project</span>
+            <ArrowUpRight className="h-4 w-4 text-neon-lime" />
         </div>
       </div>
       
