@@ -11,40 +11,68 @@ export function ProductCard({ product }: ProductCardProps) {
   const creator = getCreator(product.creatorId);
   
   return (
-    <div className="group relative flex flex-col border-2 border-zinc-100 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-black hover:shadow-[8px_8px_0px_0px_#D4F800]">
+    <div className="group relative flex flex-col border-2 border-black bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#D4F800]">
       <Link href={`/product/${product.id}`} className="absolute inset-0 z-10">
         <span className="sr-only">View {product.title}</span>
       </Link>
       
-      <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden bg-zinc-100">
+      {/* Image Section */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden border-b-2 border-black bg-zinc-100">
         <Image
           src={product.imageUrl}
           alt={product.title}
           fill
-          className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black px-4 py-3 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
-            <span className="font-bold text-neon-lime text-xs tracking-widest uppercase">View Product</span>
-            <ArrowUpRight className="h-4 w-4 text-neon-lime" />
+        
+        {/* Overlay Badge */}
+        <div className="absolute top-0 left-0 border-b-2 border-r-2 border-black bg-white px-3 py-1">
+           <span className="font-mono text-xs font-bold uppercase tracking-tighter text-black">
+              {product.category}
+           </span>
+        </div>
+
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/20">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-neon-lime opacity-0 shadow-[4px_4px_0px_0px_black] transition-all duration-300 group-hover:scale-100 group-hover:opacity-100">
+                <ArrowUpRight className="h-6 w-6 text-black" />
+            </div>
         </div>
       </div>
       
-      <div className="flex flex-col gap-1">
-        <div className="flex justify-between items-start gap-2">
-          <h3 className="font-bold text-black text-lg leading-tight line-clamp-1 group-hover:text-zinc-700 transition-colors">
+      {/* Content Section */}
+      <div className="flex flex-1 flex-col justify-between p-4">
+        <div className="mb-4">
+          <h3 className="font-display text-2xl font-black uppercase leading-none tracking-tight text-black group-hover:text-zinc-700">
             {product.title}
           </h3>
-          <span className="shrink-0 text-[10px] font-bold text-zinc-500 uppercase tracking-wider border border-zinc-200 px-2 py-1 bg-zinc-50">
-            {product.category}
-          </span>
+          <p className="mt-2 line-clamp-2 font-mono text-xs text-zinc-500">
+            {product.description}
+          </p>
         </div>
         
-        {creator && (
-          <p className="text-sm text-zinc-500 font-medium">
-            by <span className="text-black font-bold">{creator.name}</span>
-          </p>
-        )}
+        <div className="flex items-center justify-between border-t-2 border-black pt-3">
+          {creator && (
+            <div className="flex items-center gap-2">
+               <div className="h-6 w-6 overflow-hidden rounded-full border border-black bg-zinc-200">
+                  <Image 
+                    src={creator.avatar} 
+                    alt={creator.name}
+                    width={24}
+                    height={24}
+                    className="h-full w-full object-cover"
+                  />
+               </div>
+               <span className="font-mono text-xs font-bold uppercase text-black">
+                 {creator.name}
+               </span>
+            </div>
+          )}
+          <span className="font-mono text-xs font-bold text-zinc-400">
+            {new Date(product.launchedAt).getFullYear()}
+          </span>
+        </div>
       </div>
     </div>
   );
