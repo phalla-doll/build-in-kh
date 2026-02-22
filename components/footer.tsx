@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Logo } from '@/components/logo';
 
 export function Footer() {
   return (
@@ -7,8 +8,11 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           <div className="max-w-sm">
              <div className="flex items-end gap-2 mb-6">
-                <span className="font-display text-8xl font-bold leading-none tracking-tighter text-white">02</span>
-                <span className="text-2xl font-mono text-zinc-600 mb-2">/06</span>
+                <Logo className="h-20 w-20" variant="neon" />
+                <div className="flex flex-col">
+                  <span className="font-display text-4xl font-black tracking-tighter text-white leading-none">BuildInKH</span>
+                  <span className="text-sm font-mono text-zinc-500">EST. 2024</span>
+                </div>
              </div>
              <div className="border-l-2 border-neon-lime pl-6">
                 <h3 className="text-neon-lime font-bold text-lg mb-2 flex items-center gap-2">

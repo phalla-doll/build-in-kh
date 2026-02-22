@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import { Github } from 'lucide-react';
+import { Logo } from '@/components/logo';
 
 export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm transition-all border-b border-zinc-100">
       <div className="container mx-auto flex h-24 items-center justify-between px-6 md:px-12">
         <div className="flex items-center gap-12">
-          <Link href="/" className="font-display text-3xl font-black tracking-tighter text-black">
+          <Link href="/" className="flex items-center gap-3 font-display text-3xl font-black tracking-tighter text-black">
+            <Logo className="h-10 w-10" />
             BuildInKH
           </Link>
           <div className="hidden md:flex items-center gap-8">
