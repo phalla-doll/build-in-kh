@@ -12,8 +12,8 @@ export function Navbar() {
             BuildInKH
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm font-bold text-zinc-500 hover:text-black transition-colors uppercase tracking-wide">
-              Discover
+            <Link href="/ranking" className="text-sm font-bold text-zinc-500 hover:text-black transition-colors uppercase tracking-wide">
+              Github Ranking
             </Link>
             <Link href="/about" className="text-sm font-bold text-zinc-500 hover:text-black transition-colors uppercase tracking-wide">
               About
