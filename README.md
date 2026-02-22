@@ -1,20 +1,59 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# BuildInKH
 
-# Run and deploy your AI Studio app
+BuildInKH is a curated platform that showcases real, launched digital products built by developers in Cambodia. It highlights execution over concepts—featuring live websites, SaaS tools, mobile apps, open-source projects, and experimental builds that are publicly accessible and actively running.
 
-This contains everything you need to run your app locally.
+## Design Theme: Future of Digital KH
 
-View your app in AI Studio: https://ai.studio/apps/f914e20c-66b3-4431-a11b-14c7364ce466
+The application features a bold, high-contrast design language inspired by the "Future of E-Bike" aesthetic.
 
-## Run Locally
+- **Primary Accent:** Neon Lime (`#D4F800`)
+- **Typography:** Satoshi (Bold, Uppercase, Condensed)
+- **Visual Style:**
+  - Stark black text on white backgrounds.
+  - Brutalist elements (thick borders, sharp shadows).
+  - High-energy, tech-forward feel.
 
-**Prerequisites:**  Node.js
+## Tech Stack
 
+- **Framework:** [Next.js 15+](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Fonts:** [Satoshi](https://www.fontshare.com/fonts/satoshi) (via Fontshare)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Features
+
+- **Curated Product Grid:** A showcase of digital products with detailed cards featuring hover effects and key metrics.
+- **Search & Filtering:** robust search functionality and category filtering (Mobile Apps, SaaS, Open Source, etc.).
+- **Creator Profiles:** Dedicated pages for creators to showcase their portfolio of shipped products.
+- **Submission System:** A streamlined process for developers to submit their own products.
+- **Responsive Design:** Fully responsive layout optimized for all device sizes.
+
+## Getting Started
+
+1.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+2.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+3.  **Open the application:**
+
+    Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+- `/app`: Next.js App Router pages and layouts.
+- `/components`: Reusable UI components (Navbar, Hero, ProductCard, etc.).
+- `/lib`: Utility functions and mock data.
+- `/hooks`: Custom React hooks.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
