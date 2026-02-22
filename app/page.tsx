@@ -33,11 +33,11 @@ export default async function Home(props: {
       <Navbar />
       <Hero />
       
-      <section id="products" className="container mx-auto px-6 md:px-12 py-12">
+      <section id="products" className="w-full px-6 md:px-12 py-12">
         <FilterBar />
         
         {filteredProducts.length > 0 ? (
-          <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-x-8 gap-y-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

@@ -1,7 +1,8 @@
 export type TechStack = 
   | 'React' | 'Next.js' | 'Vue' | 'Angular' | 'Svelte' 
   | 'Node.js' | 'Python' | 'Go' | 'Laravel' | 'Flutter' 
-  | 'Swift' | 'Kotlin' | 'Firebase' | 'Supabase' | 'Tailwind CSS';
+  | 'Swift' | 'Kotlin' | 'Firebase' | 'Supabase' | 'Tailwind CSS'
+  | 'Three.js' | 'OpenAI' | 'TypeScript';
 
 export interface Creator {
   id: string;
@@ -150,6 +151,78 @@ export const products: Product[] = [
     techStack: ['Laravel', 'Vue', 'Tailwind CSS'],
     launchedAt: '2023-09-18',
     category: 'Website',
+  },
+  {
+    id: 'p7',
+    title: 'TukTuk Go',
+    description: 'Ride-hailing aggregator for finding the best TukTuk prices.',
+    longDescription: 'Compare prices across multiple ride-hailing apps in real-time. TukTuk Go helps you save money on every ride by showing you the cheapest option instantly.',
+    url: 'https://example.com/tuktukgo',
+    imageUrl: 'https://picsum.photos/id/7/800/600',
+    creatorId: 'c2',
+    techStack: ['Flutter', 'Firebase'],
+    launchedAt: '2024-03-12',
+    category: 'Mobile App',
+  },
+  {
+    id: 'p8',
+    title: 'KhmerFonts',
+    description: 'A curated collection of high-quality Khmer typefaces.',
+    longDescription: 'Download free and premium Khmer fonts for your design projects. Features a type tester, pairing suggestions, and designer profiles.',
+    url: 'https://example.com/khmerfonts',
+    imageUrl: 'https://picsum.photos/id/8/800/600',
+    creatorId: 'c1',
+    techStack: ['Next.js', 'React', 'Tailwind CSS'],
+    launchedAt: '2023-07-30',
+    category: 'Website',
+  },
+  {
+    id: 'p9',
+    title: 'DevCam',
+    description: 'Community forum for Cambodian developers to share knowledge.',
+    longDescription: 'A Stack Overflow-style community for local developers. Ask questions, share tutorials, and find jobs in the Cambodian tech industry.',
+    url: 'https://example.com/devcam',
+    imageUrl: 'https://picsum.photos/id/9/800/600',
+    creatorId: 'c4',
+    techStack: ['Node.js', 'React', 'Supabase'],
+    launchedAt: '2023-10-05',
+    category: 'Website',
+  },
+  {
+    id: 'p10',
+    title: 'AngkorVR',
+    description: 'Virtual reality tours of the Angkor Wat temple complex.',
+    longDescription: 'Experience the magic of Angkor Wat from anywhere in the world. High-resolution 360-degree tours with audio guides in multiple languages.',
+    url: 'https://example.com/angkorvr',
+    imageUrl: 'https://picsum.photos/id/10/800/600',
+    creatorId: 'c3',
+    techStack: ['React', 'Three.js'],
+    launchedAt: '2024-01-20',
+    category: 'Website',
+  },
+  {
+    id: 'p11',
+    title: 'Kroma UI',
+    description: 'A React UI component library inspired by Khmer art.',
+    longDescription: 'Beautiful, accessible, and customizable UI components with a unique Cambodian aesthetic. Built with Tailwind CSS and Radix UI.',
+    url: 'https://example.com/kromaui',
+    imageUrl: 'https://picsum.photos/id/11/800/600',
+    creatorId: 'c1',
+    techStack: ['React', 'Tailwind CSS', 'TypeScript'],
+    launchedAt: '2023-11-01',
+    category: 'Open Source',
+  },
+  {
+    id: 'p12',
+    title: 'BongSrey',
+    description: 'AI-powered chatbot for learning Khmer language.',
+    longDescription: 'Practice conversational Khmer with an AI tutor. BongSrey corrects your grammar, suggests vocabulary, and helps you improve your pronunciation.',
+    url: 'https://example.com/bongsrey',
+    imageUrl: 'https://picsum.photos/id/12/800/600',
+    creatorId: 'c2',
+    techStack: ['Python', 'React', 'OpenAI'],
+    launchedAt: '2024-02-15',
+    category: 'SaaS',
   },
 ];
 
