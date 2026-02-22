@@ -17,10 +17,10 @@ export function Footer() {
              <div className="border-l-2 border-neon-lime pl-6">
                 <h3 className="text-neon-lime font-bold text-lg mb-2 flex items-center gap-2">
                    <span className="inline-block h-4 w-4 bg-neon-lime clip-path-polygon"></span>
-                   Smart Engineering
+                   Our Mission
                 </h3>
                 <p className="text-zinc-400 leading-relaxed">
-                   Built with precision and powered by innovation, BuildInKH combines advanced discovery technology with intelligent community management.
+                   A curated platform that showcases real, launched digital products built by developers in Cambodia.
                 </p>
              </div>
           </div>

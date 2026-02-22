@@ -9,14 +9,13 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 text-left">
             <div className="mb-6 inline-block border-l-2 border-neon-lime pl-4">
-               <span className="text-sm font-bold uppercase tracking-widest text-zinc-500">New Generation</span>
+               <span className="text-sm font-bold uppercase tracking-widest text-zinc-500">Curated Showcase</span>
             </div>
             <h1 className="mb-8 font-display text-7xl font-black tracking-tighter text-black md:text-8xl lg:text-9xl leading-[0.9]">
-              Future <span className="text-zinc-300">of</span><br />
-              Digital KH
+              Built in <span className="text-zinc-300">Cambodia</span>
             </h1>
             <p className="mb-10 text-xl text-zinc-600 md:text-2xl leading-relaxed max-w-xl">
-              Advanced digital products combining cutting-edge technology, local craftsmanship, and smart engineering.
+              A curated platform that showcases real, launched digital products built by developers in Cambodia.
             </p>
             
             <div className="flex flex-wrap gap-4">
