@@ -42,12 +42,12 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
       
       {/* Content Section */}
-      <div className="flex flex-1 flex-col justify-between p-4">
-        <div className="mb-4">
-          <h3 className="font-display text-2xl font-black uppercase leading-none tracking-tight text-black group-hover:text-zinc-700">
+      <div className="flex flex-1 flex-col p-4">
+        <div className="mb-4 flex-1">
+          <h3 className="font-display text-xl font-black uppercase leading-tight tracking-tight text-black group-hover:text-zinc-700 line-clamp-2">
             {product.title}
           </h3>
-          <p className="mt-2 line-clamp-2 font-mono text-xs text-zinc-500">
+          <p className="mt-3 line-clamp-3 font-mono text-xs text-zinc-600 leading-relaxed">
             {product.description}
           </p>
         </div>
