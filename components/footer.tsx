@@ -7,11 +7,11 @@ export function Footer() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           <div className="max-w-sm">
-             <div className="flex items-end gap-2 mb-6">
-                <Logo className="h-20 w-20" variant="neon" />
+             <div className="flex items-center gap-3 mb-6">
+                <Logo className="h-10 w-10" variant="neon" />
                 <div className="flex flex-col">
-                  <span className="font-display text-4xl font-black tracking-tighter text-white leading-none">BuildInKH</span>
-                  <span className="text-sm font-mono text-zinc-500">EST. 2024</span>
+                  <span className="font-display text-2xl font-black tracking-tighter text-white leading-none">BuildInKH</span>
+                  <span className="text-[10px] font-mono text-zinc-500 tracking-widest">EST. 2024</span>
                 </div>
              </div>
              <div className="border-l-2 border-neon-lime pl-6">
